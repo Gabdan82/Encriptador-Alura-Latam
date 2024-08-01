@@ -34,3 +34,13 @@ function copiarTexto() {
         alert("Texto copiado al portapapeles");
     });
 }
+
+function limpiarTexto() {
+    document.getElementById("texto").value = '';
+
+    // Reiniciar el contenido de #resultado al estado original
+    document.getElementById("resultado").innerHTML = `
+        <p id="mensaje"><strong>Ningún mensaje fue encontrado</strong></p> 
+        <p id="IngresaTexto">Ingresa el texto que quieres encriptar o desencriptar</p>
+    `;
+}
