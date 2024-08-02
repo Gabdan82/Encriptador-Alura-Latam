@@ -16,14 +16,27 @@ function desencriptar(texto) {
         .replace(/ufat/g, "u");
 }
 
+function validarTexto(texto) {
+    const regex = /^[a-z\s]*$/; // Solo permite letras minúsculas y espacios
+    return regex.test(texto);
+}
+
 function encriptarTexto() {
     const texto = document.getElementById("texto").value;
+    if (!validarTexto(texto)) {
+        alert("No están permitidas letras mayúsculas ni caracteres especiales");
+        return;
+    }
     const resultado = encriptar(texto);
     document.getElementById("resultado").innerText = resultado;
 }
 
 function desencriptarTexto() {
     const texto = document.getElementById("texto").value;
+    if (!validarTexto(texto)) {
+        alert("No están permitidas letras mayúsculas ni caracteres especiales");
+        return;
+    }
     const resultado = desencriptar(texto);
     document.getElementById("resultado").innerText = resultado;
 }

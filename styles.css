@@ -15,6 +15,7 @@
     
   
 .header {
+    margin-top: 1rem;
     padding: 0.3%
     
 }
@@ -31,13 +32,15 @@ body {
 
 #contenido {
    display:flex;
-  }
+    margin-top: 1rem;
+}
 
 textarea {
     width: 63rem;
-    height: 29rem;
+    height: 27rem;
     border:none;
     background-color: var(--color-primario)
+    
 }
    
     #resultado {
@@ -47,7 +50,7 @@ textarea {
     justify-content: center;
     border-radius: 1.5rem;
     width: 31rem;
-    height: 29rem; 
+    height: 27rem; 
     background-color: var(--color-secundario);
     text-align: center;
     border-color: var(--color-secundario); 
