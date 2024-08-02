@@ -39,19 +39,19 @@ textarea {
     border:none;
     background-color: var(--color-primario)
 }
-
-#resultado {
-    display:flex;
+   
+    #resultado {
+    display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     border-radius: 1.5rem;
-    width: 31rem;  
-    height: 29rem; //1 rem = 16pixeles
+    width: 31rem;
+    height: 29rem; 
     background-color: var(--color-secundario);
     text-align: center;
-    border-color: var(--color-secundario);
-    
+    border-color: var(--color-secundario); 
+} 
     
 #mensaje {
     font-family: 'Courier New', Courier, monospace;
@@ -61,7 +61,7 @@ textarea {
 
 #IngresaTexto {
     font-family: 'Courier New', Courier, monospace;
-    font-size:small
+    font-size: small
 }
 
 }
@@ -103,11 +103,23 @@ footer {
     background-color: var(--color-primario);
 }
 
-@media (max: widht 1200px;) {
+
+@media (max-width: 1200px) {
     #contenido {
-        display:flex;
-        flex-direction: row;
-       }
+        
+        flex-direction: column; /* Cambiado de row a column */
+    }
+
+    textarea, #resultado {
+        margin-top: 1rem;
+        max-width: 350px; /* Establecer ancho máximo */
+    }
+    
+    #botones {
+        margin-left: 1rem;          
+        padding-top: 0.625rem;
+        padding-bottom: 0.625rem;
 
 
 }
+
